@@ -20,5 +20,6 @@ begin
   validate_email(email)
 rescue  InvalidEmailError => e
   puts "Did Not perform Task! Reason:  #{e.message}"
+  retry
 end
 
