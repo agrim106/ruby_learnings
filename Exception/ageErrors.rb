@@ -8,8 +8,8 @@ begin
   puts "Enter your Age : "
   age = Integer(gets.chomp)
   if age < 18 || age > 100
-     raise AgeError
-      "Age must be between 18 and 100."
+     raise AgeError,
+     "Age must be between 18 and 100."
      end
       puts "Your age is within the valid range."
     
