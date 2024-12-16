@@ -28,7 +28,7 @@ RSpec.describe User do
 
     it 'validates uniqueness of email' do
 
-      User.new(valid_email).save
+      User.new(valid_email).save 
 
       duplicate_user = User.new(valid_email)
 
