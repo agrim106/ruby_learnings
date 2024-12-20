@@ -1,6 +1,0 @@
-# Logfile created on 2024-12-20 10:10:31 +0530 by logger.rb/v1.6.0
-I, [2024-12-20T10:10:31.990436 #5712]  INFO -- : This is an info message.
-W, [2024-12-20T10:10:31.990849 #5712]  WARN -- : This is a warning message.
-E, [2024-12-20T10:10:31.991188 #5712] ERROR -- : This is an error message.
-F, [2024-12-20T10:10:31.991536 #5712] FATAL -- : This is a fatal message.
-F, [2024-12-20T10:12:57.693087 #17712] FATAL -- : This is a fatal message.
