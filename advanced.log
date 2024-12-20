@@ -1,0 +1,4 @@
+# Logfile created on 2024-12-20 10:14:44 +0530 by logger.rb/v1.6.0
+[2024-12-20 10:14:44] INFO: The application started successfully.
+[2024-12-20 10:14:44] WARN: Low disk space warning.
+[2024-12-20 10:14:44] ERROR: An unexpected error occurred.
