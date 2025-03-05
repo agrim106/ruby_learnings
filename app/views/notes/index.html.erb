@@ -4,13 +4,30 @@
 
 <h1>Notes</h1>
 
-<div id="notes">
-  <% @notes.each do |note| %>
-    <%= render note %>
-    <p>
-      <%= link_to "Show this note", note %>
-    </p>
-  <% end %>
-</div>
+<%= form_with url: notes_path, method: :get, local: true do %>
+  <%= text_field_tag :keyword, params[:keyword], placeholder: "Search notes by title or content..." %>
+  <%= submit_tag "Search" %>
+<% end %>
 
-<%= link_to "New note", new_note_path %>
+<p><%= link_to "New note", new_note_path %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.title %></td>
+        <td><%= note.content %></td>
+        <td><%= link_to "Show", note %></td>
+        <td><%= link_to "Edit", edit_note_path(note) %></td>
+        <td><%= link_to "Destroy", note, method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
