@@ -1,6 +1,16 @@
-<h1>My Notes</h1>
-<ul>
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Notes" %>
+
+<h1>Notes</h1>
+
+<div id="notes">
   <% @notes.each do |note| %>
-    <li><%= note.title %></li>
+    <%= render note %>
+    <p>
+      <%= link_to "Show this note", note %>
+    </p>
   <% end %>
-</ul>
+</div>
+
+<%= link_to "New note", new_note_path %>

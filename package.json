@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "esbuild": "^0.25.0",
+    "turbolinks": "^5.2.0"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds --target=es2016"
+  }
+}
